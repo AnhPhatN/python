@@ -129,5 +129,10 @@ class Television:
 
 
 if __name__ == "__main__":
-    #test here
+    tv1 = Television()
+    tv1.power()
+    tv1.volume_up()
+    tv1.mute()
+
+    print(tv1)
     pass
