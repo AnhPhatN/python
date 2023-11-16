@@ -1,15 +1,4 @@
 '''
-
-
-
-
-
-'''
-
-
-
-
-'''
 Type hinting notes!
 
 local variables
@@ -20,6 +9,7 @@ def Function(param1: type = value, param2: type = value) -> type:
 
 
 '''
+
 
 class Television:
     MIN_VOLUME = 0
