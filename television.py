@@ -23,11 +23,6 @@ class Television:
         self.__volume = Television.MIN_VOLUME
         self.__channel = Television.MIN_CHANNEL
 
-    def power(self):
-        if self.__status == False:
-            self.__status = True
-        else:
-            self.__status = False
 
     def power(self):
         if self.__status == False:
