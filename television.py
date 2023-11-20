@@ -1,16 +1,3 @@
-'''
-Type hinting notes!
-
-local variables
-'var_name: type = value'
-
-On parameters 
-def Function(param1: type = value, param2: type = value) -> type:
-
-
-'''
-
-
 class Television:
     MIN_VOLUME = 0
     MAX_VOLUME = 2
