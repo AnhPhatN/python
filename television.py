@@ -27,11 +27,13 @@ class Television:
         self.__volume = Television.MIN_VOLUME
         self.__channel = Television.MIN_CHANNEL
 
-    def power(self):
+    def power(self) -> None:
         '''
         Sets the status of the TV to the opposite bool value
         if status is True -> set to False
         and if is False -> set to True
+
+        :return: None
         '''
         if self.__status == False:
             self.__status = True
@@ -40,9 +42,11 @@ class Television:
 
 
 
-    def mute(self):
+    def mute(self) -> None:
         '''
         mutes TV, when str func is called, volume prints as 0
+
+        :return: None
         '''
         if self.__status == False: #making sure the TV is powered ON
             return
@@ -55,9 +59,11 @@ class Television:
 
 
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         '''
         increase channel by one, if channel is on the MAX channel then switch to the MINIMUM channel
+
+        :return: None
         '''
         if self.__status == False: #making sure the TV is powered ON
             return
@@ -70,9 +76,11 @@ class Television:
 
         
 
-    def channel_down(self):
+    def channel_down(self) -> None:
         '''
         decreases channel by one, if channel is on the MINIMUM channel then switch to the MAX channel
+
+        :return: None
         '''
         if self.__status == False: #making sure the TV is powered ON
             return
@@ -83,9 +91,11 @@ class Television:
             self.__channel -= 1
 
 
-    def volume_up(self):
+    def volume_up(self) -> None:
         '''
         increases the volume of TV by one, if TV is on MAX volume then no change
+
+        :return: None
         '''
         if self.__status == False: #making sure the TV is powered ON
             return
@@ -98,9 +108,11 @@ class Television:
 
 
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         '''
         decreases the volume of the TV by one, if TV in on the MINIMUM volume then no change
+
+        :return: None
         '''
         if self.__status == False: #making sure the TV is powered ON
             return
@@ -113,15 +125,17 @@ class Television:
 
 
 
-    def __str__(self):
+    def __str__(self) -> None:
         '''
         :return: status of power, channel, and volume
         if TV is muted, then volume is 0
+
+        :return: None
         '''
         if self.__muted == True:
-            return f'Power = [{self.__status}], Channel = [{self.__channel}], Volume = [0]'
+            return f'Power = {self.__status}, Channel = {self.__channel}, Volume = 0'
         
-        return f'Power = [{self.__status}], Channel = [{self.__channel}], Volume = [{self.__volume}]'
+        return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
 
 
 
